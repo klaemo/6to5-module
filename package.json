@@ -1,0 +1,31 @@
+{
+  "name": "6to5-module",
+  "version": "1.0.0",
+  "description": "6to5 node module pattern experiment",
+  "main": "6to5-module.js",
+  "scripts": {
+    "prepublish": "npm run 6to5",
+    "6to5": "6to5 index.js -o 6to5-module.js",
+    "watch": "npm run 6to5 -- -w",
+    "pretest": "npm run 6to5",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/klaemo/6to5-module.git"
+  },
+  "keywords": [
+    "6to5",
+    "es6",
+    "module"
+  ],
+  "author": "Clemens Stolle <klaemo@fastmail.fm>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klaemo/6to5-module/issues"
+  },
+  "homepage": "https://github.com/klaemo/6to5-module",
+  "devDependencies": {
+    "6to5": "^3.1.1"
+  }
+}
