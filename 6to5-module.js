@@ -12,46 +12,46 @@ var join = _require.join;
 
 var names = ["foo", "bar"];
 console.log("arrow fn " + names.map(function (v) {
-	return join(v, "2");
+  return join(v, "2");
 }) + " and template string");
 
 var obj = (function () {
-	var _obj = {};
+  var _obj = {};
 
-	_defineProperty(_obj, names[0], "bar");
+  _defineProperty(_obj, names[0], "bar");
 
-	_defineProperty(_obj, "names", names);
+  _defineProperty(_obj, "names", names);
 
-	_defineProperty(_obj, "getNames", function getNames() {
-		var _this = this;
-		return names.map(function (v) {
-			return "" + v + " " + _this.foo;
-		});
-	});
+  _defineProperty(_obj, "getNames", function getNames() {
+    var _this = this;
+    return names.map(function (v) {
+      return "" + v + " " + _this.foo;
+    });
+  });
 
-	return _obj;
+  return _obj;
 })();
 
 console.log(obj.getNames());
 
 var ClassTrip = (function () {
-	function ClassTrip(names) {
-		this.names = names;
-	}
+  function ClassTrip(names) {
+    this.names = names;
+  }
 
-	_prototypeProperties(ClassTrip, null, {
-		getNames: {
-			value: function getNames() {
-				return this.names.map(function (v) {
-					return v.toUpperCase();
-				}).join(" & ");
-			},
-			writable: true,
-			configurable: true
-		}
-	});
+  _prototypeProperties(ClassTrip, null, {
+    getNames: {
+      value: function getNames() {
+        return this.names.map(function (v) {
+          return v.toUpperCase();
+        }).join(" & ");
+      },
+      writable: true,
+      configurable: true
+    }
+  });
 
-	return ClassTrip;
+  return ClassTrip;
 })();
 
 var trip = new ClassTrip(["clemens", "ana"]);
