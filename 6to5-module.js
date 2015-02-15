@@ -4,6 +4,8 @@ var _defineProperty = function (obj, key, value) { return Object.defineProperty(
 
 var _prototypeProperties = function (child, staticProps, instanceProps) { if (staticProps) Object.defineProperties(child, staticProps); if (instanceProps) Object.defineProperties(child.prototype, instanceProps); };
 
+var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+
 // Try out some of the new crazies
 var _require = require("path");
 
@@ -36,6 +38,8 @@ console.log(obj.getNames());
 
 var ClassTrip = (function () {
   function ClassTrip(names) {
+    _classCallCheck(this, ClassTrip);
+
     this.names = names;
   }
 

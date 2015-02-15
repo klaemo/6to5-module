@@ -1,13 +1,13 @@
 {
   "name": "6to5-module",
   "version": "1.0.0",
-  "description": "6to5 node module pattern experiment",
+  "description": "babel (6to5) node module pattern experiment",
   "main": "6to5-module.js",
   "scripts": {
-    "prepublish": "npm run 6to5",
-    "6to5": "6to5 index.js -o 6to5-module.js",
-    "watch": "npm run 6to5 -- -w",
-    "pretest": "npm run 6to5",
+    "prepublish": "npm run babel",
+    "babel": "babel index.js -o 6to5-module.js",
+    "watch": "npm run babel -- -w",
+    "pretest": "npm run babel",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,7 +15,7 @@
     "url": "https://github.com/klaemo/6to5-module.git"
   },
   "keywords": [
-    "6to5",
+    "babel",
     "es6",
     "module"
   ],
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/klaemo/6to5-module",
   "devDependencies": {
-    "6to5": "^3.1.1"
+    "babel": "^4.0.1"
   }
 }
